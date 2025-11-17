@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: buildzio2019
+      MYSQL_DATABASE: laravel_db
+      MYSQL_USER: Eguzeido
+      MYSQL_PASSWORD: mayo2005
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  backend: 
+    image: php:8.1-fpm
+
